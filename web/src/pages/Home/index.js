@@ -1,6 +1,8 @@
-import React from 'react'
-import {useHistory} from 'react-router-dom'
-import Footer from '../../components/Footer'
+import React from 'react';
+import {useHistory} from 'react-router-dom';
+
+import './styles.css';
+import AppBar from '../../components/AppBar';
 
 function Home() {
     
@@ -8,12 +10,13 @@ function Home() {
 
     function navigateToLogin () {
       history.push('login')
+      console.log('ola')
     }
 
     return (
-      <div>
-        <button className='teste' onClick="navigateToLogin()">Navegar</button>
-        <Footer />
+      <div className="home-container">
+        <h1> Home </h1>
+        <button className='teste' onClick={()=> navigateToLogin()}> Navegar </button>
       </div>
     );
   }
