@@ -1,29 +1,35 @@
 .appbar-container {
     
+    
 }
 
 .appbar-container .appbar-content {
-    background-color: aquamarine;
+    background-color: #212529;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 90vw;
     margin: auto;
 }
 
 .appbar-container .appbar-content h1 {
-    margin-left: 10px;
-    color: red;
+    margin-left: 15rem;
+    color: white;
+}
+
+.appbar-container .appbar-content .appbar-search input{
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
 }
 
 
 .appbar-container .appbar-content .appbar-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-width: 200px;
-    max-width: 300px;
-    margin-right: 10px;
-
+    justify-content: space-between; 
+    min-width: 100px;
+    margin-right: 10rem;
 }
+
 
