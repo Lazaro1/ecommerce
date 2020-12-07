@@ -20,7 +20,20 @@ function AppBar() {
           <Link to="/"> Home </Link>
           <Link to="login"> Login </Link>
         </div>
+      </div>
 
+      {/* MENU */}
+      <div className="appbar-menu">
+        <nav>
+          <ul className="appbar-navigation">
+            <li><a href="#">Informática</a></li>
+            <li><a href="#">Infantil</a></li>
+            <li><a href="#">Esporte</a></li>
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Acessórios</a></li>
+          </ul>
+        </nav>
       </div>
 
     </div>

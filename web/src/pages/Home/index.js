@@ -2,6 +2,7 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 
+import Products from './../../components/Products'
 import 'react-slideshow-image/dist/styles.css'
 import './styles.css';
 
@@ -25,23 +26,22 @@ function Home() {
         <Slide>
           <div className="each-slide">
             <div style={{'backgroundImage': `url("https://images.unsplash.com/photo-1594750018712-77643025beb6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9")`}}>
-              <span>Slide 1</span>
+              <span>Teste 1</span>
             </div>
           </div>
           <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-              <span>Slide 2</span>
+            <div style={{'backgroundImage': `url("https://images.unsplash.com/photo-1582167371270-68a4c033e732?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9")`}}> 
+            <span>Teste 2</span>
             </div>
           </div>
           <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-              <span>Slide 3</span>
+            <div style={{'backgroundImage': `url("https://images.unsplash.com/photo-1594750018712-77643025beb6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9")`}}>
+            <span>Teste 3</span>
             </div>
           </div>
         </Slide>
       </div>
-        {/* <h1> Home </h1>
-        <button className='teste' onClick={()=> navigateToLogin()}> Navegar </button> */}
+      <Products />
       </div>
     );
   }
@@ -49,3 +49,6 @@ function Home() {
   export default Home;
 
   // <div style={{'backgroundImage': `url("https://images.unsplash.com/photo-1594750018712-77643025beb6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9")`}}>
+
+          {/* <h1> Home </h1>
+        <button className='teste' onClick={()=> navigateToLogin()}> Navegar </button> */}

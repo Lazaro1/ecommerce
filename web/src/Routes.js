@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from  'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import AppBar from './components/AppBar'
+import Products from './components/Products'
 
 
 function Routes() {
@@ -15,6 +16,7 @@ function Routes() {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/Login" component={Login}/>
             </Switch>
+            
         </BrowserRouter>
     );
   }
