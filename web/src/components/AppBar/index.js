@@ -1,39 +1,32 @@
 import React from 'react'
-import ReactDOM from "react-dom";
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 
 import './styles.css'
 
-function AppBar() {  
+function AppBar() {
+  const history = useHistory();
+
   return (
     <div className="appbar-container">
 
       <div className="appbar-content">
-        <h1>LOGO</h1>
-        <div className="appbar-search">
-            <input
-            type="text"
-            placeholder="O que você está procurando?"          
-            />    
-        </div>
+        <h1 onClick={() => history.push('/')} >LOGO</h1>
         <div className="appbar-items">
-          <Link to="/"> Home </Link>
-          <Link to="login"> Login </Link>
+          <Link className="link-nav" to="/"> Home </Link>
+          <Link className="link-nav" to="login"> Login </Link>
+          <AiOutlineShoppingCart color="#fff" width={100} />
         </div>
       </div>
 
       {/* MENU */}
-      <div className="appbar-menu">
-        <nav>
-          <ul className="appbar-navigation">
-            <li><a href="#">Informática</a></li>
-            <li><a href="#">Infantil</a></li>
-            <li><a href="#">Esporte</a></li>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Acessórios</a></li>
-          </ul>
-        </nav>
+      <div className="category-container">
+        <Link className="category-item" to="category">Informática</Link>
+        <Link className="category-item" to="category">Infantil</Link>
+        <Link className="category-item" to="category">Esporte</Link>
+        <Link className="category-item" to="category">Masculino</Link>
+        <Link className="category-item" to="category">Feminino</Link>
+        <Link className="category-item" to="category">Acessórios</Link>
       </div>
 
     </div>

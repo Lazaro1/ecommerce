@@ -1,64 +1,50 @@
 .appbar-container {
-    
-    
+    background-color: #212529;
 }
 
 .appbar-container .appbar-content {
-    background-color: #212529;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 90vw;
+    max-width: 1200px;
     margin: auto;
+    padding: 20px;
 }
 
 .appbar-container .appbar-content h1 {
-    margin-left: 15rem;
     color: white;
-}
-
-.appbar-container .appbar-content .appbar-search input{
-    width: 500px;
-    height: 30px;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 
 .appbar-container .appbar-content .appbar-items {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    min-width: 100px;
-    margin-right: 10rem;
-    /* não funciona o text decoration */
-    text-decoration: none;
+    justify-content: space-between;
+    width: 100px;
 }
 
-.appbar-container .appbar-menu {
+.appbar-container .appbar-content .appbar-items .link-nav {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.appbar-container .category-container {
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
-    max-width: 90vw;
-    margin: auto;
-}
-
-.appbar-container .appbar-menu .appbar-navigation {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-}
-
-.appbar-container .appbar-menu .appbar-navigation li{
-    margin-left: 50px;
-    padding: 10px;
-    font-size: 1.3em;
-    font-weight: 400;
-    
+    background-color: #fff;
+    padding: 50px;
+    padding-top: 25px;
 
 }
 
-.appbar-container .appbar-menu .appbar-navigation li a{
+.appbar-container .category-item {
     text-decoration: none;
     color: black;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 10px;
 }
