@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from  'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import AppBar from './components/AppBar'
-import Products from './components/Products'
+
 
 
 function Routes() {
