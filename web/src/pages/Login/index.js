@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './styles.css';
 
+import CreateUsers from '../CreateUsers'
 import api from '../../services/api';
 
 function Login() {
@@ -39,6 +40,7 @@ function Login() {
             <input type="password" placeholder="Senha" onChange={e => setPassword(e.target.value)} />
           </div>
           <button type="submit" onClick={e => handleSubmit(e)} className="btn-login">Login</button>
+          <button onClick={() => history.push('/CreateUsers')} className="btn-create" >Cadastrar</button>  
         </form>
       </div>
     </div>
