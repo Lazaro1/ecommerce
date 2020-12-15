@@ -33,7 +33,6 @@ const createusers = async (request, response) => {
         } else {
             return response.json(false)
         }
-            
 
     } catch (error) {
         return response.json({ error: error.message });

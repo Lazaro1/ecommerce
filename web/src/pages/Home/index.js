@@ -26,10 +26,10 @@ function Home() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam leo eros, dictum vel mollis sed, accumsan nec libero. Ut non tortor at odio interdum tempor. Donec viverra pharetra lacus vel pretium. Donec at elit non odio accumsan fringilla sed id nunc. Nunc hendrerit risus urna, ac cursus ligula ultricies sit amet. In hac habitasse platea dictumst. Aliquam mattis dignissim magna vitae porta. Morbi aliquet risus vitae lacus convallis, id vestibulum diam tempus. Etiam hendrerit justo est. Nullam sollicitudin mattis maximus. Sed vitae leo et magna vulputate vehicula quis id dolor. Integer vitae risus sed neque ornare aliquet ac sed justo.'
     },
     {
-      image: lobo3,
-      title: 'Title 3',
+      image: lobo1,
+      title: 'Title 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam leo eros, dictum vel mollis sed, accumsan nec libero. Ut non tortor at odio interdum tempor. Donec viverra pharetra lacus vel pretium. Donec at elit non odio accumsan fringilla sed id nunc. Nunc hendrerit risus urna, ac cursus ligula ultricies sit amet. In hac habitasse platea dictumst. Aliquam mattis dignissim magna vitae porta. Morbi aliquet risus vitae lacus convallis, id vestibulum diam tempus. Etiam hendrerit justo est. Nullam sollicitudin mattis maximus. Sed vitae leo et magna vulputate vehicula quis id dolor. Integer vitae risus sed neque ornare aliquet ac sed justo.'
-    },
+    }    
   ]
 
   return (

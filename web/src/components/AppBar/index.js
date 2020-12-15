@@ -13,9 +13,10 @@ function AppBar() {
       <div className="appbar-content">
         <h1 onClick={() => history.push('/')} >LOGO</h1>
         <div className="appbar-items">
+          <label for="toogle">&#9776;</label>
           <Link className="link-nav" to="/"> Home </Link>
           <Link className="link-nav" to="login"> Login </Link>
-          <AiOutlineShoppingCart color="#fff" width={100} />
+          <AiOutlineShoppingCart className="link-nav" color="#fff" width={100} />
         </div>
       </div>
 

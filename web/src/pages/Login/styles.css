@@ -44,10 +44,16 @@
     border: 1px solid #ccddef;
     outline-color: #7159c1;
   }
-  
-  .login-container .login-section form .btn-login {
+  .login-container .login-section .login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .login-container .login-section .login-btn button {
     display: block;
-    min-width: 120px;
+    min-width: 100px;
     border: none;
     background-color: #212529;
     color: white;
@@ -58,21 +64,7 @@
     transition: background-color .2s
   }
 
-.login-container .login-section form .btn-login:hover {
+  .login-container .login-section .login-btn button:hover {
     color: black;
     background-color: #A9A9A9;
-}
-
-.login-container .login-section form .btn-create {
-  
-  min-width: 120px;
-  border: none;
-  background-color: #212529;
-  color: white;
-  border-radius: 25px;
-  margin-left: 38px;
-  margin-top: 10px;
-  padding: 7px;
-  cursor: pointer;
-  transition: background-color .2s
 }
