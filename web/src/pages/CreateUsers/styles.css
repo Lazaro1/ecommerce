@@ -1,4 +1,4 @@
-  body {
+body {
     
     font-family: Roboto, Arial, sans-serif;
   }
@@ -44,16 +44,10 @@
     border: 1px solid #ccddef;
     outline-color: #7159c1;
   }
-  .login-container .login-section .login-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-  }
-
-  .login-container .login-section .login-btn button {
+  
+  .login-container .login-section form .btn-login {
     display: block;
-    min-width: 100px;
+    min-width: 120px;
     border: none;
     background-color: #212529;
     color: white;
@@ -64,7 +58,7 @@
     transition: background-color .2s
   }
 
-  .login-container .login-section .login-btn button:hover {
+.login-container .login-section form .btn-login:hover {
     color: black;
     background-color: #A9A9A9;
 }

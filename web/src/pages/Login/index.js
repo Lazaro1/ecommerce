@@ -19,7 +19,7 @@ function Login() {
     if (serverResponse.data === true) {
       history.push('/')
     } else {
-      console.log('Usuário ou senha inválidos')
+      alert('Usuário ou senha inválidos')
     }
   }
 
@@ -38,7 +38,11 @@ function Login() {
             <label >Senha</label>
             <input type="password" placeholder="Senha" onChange={e => setPassword(e.target.value)} />
           </div>
-          <button type="submit" onClick={e => handleSubmit(e)} className="btn-login">Login</button>
+          <div className='login-btn'>
+            <button onClick={() => history.push('/CreateUsers')} >Cadastrar</button>  
+            <button type="submit" onClick={e => handleSubmit(e)} >Login</button>
+          </div>
+
         </form>
       </div>
     </div>
