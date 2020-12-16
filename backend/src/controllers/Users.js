@@ -1,6 +1,14 @@
 const { request, response } = require('express');
 const connection = require('../database/connection');
 
+
+const getAll = async (request, response) => {
+    const result = await connection('users').select('*');
+
+    return response.json(result)
+}
+
+
 const login = async (request, response) => {
     const { email, password } = request.body;
 
@@ -12,13 +20,10 @@ const login = async (request, response) => {
         .select('*')
         .first();
 
-    if (result)
-        return response.json(true)
-    else
-        return response.json(false);
+    return response.json(result)
 }
 
-const createusers = async (request, response) => {
+const createUser = async (request, response) => {
     try {
         const register = {
             name: request.body.name,
@@ -42,5 +47,6 @@ const createusers = async (request, response) => {
 
 module.exports = {
     login,
-    createusers
+    createUser,
+    getAll
 }

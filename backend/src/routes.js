@@ -5,6 +5,7 @@ const users = require('./controllers/Users')
 const create = require('./controllers/Users')
 
 routes.post('/users/login', users.login);
-routes.post('/users/create', users.createusers);
+routes.post('/users', users.createUser);
+routes.get('/users', users.getAll);
 
 module.exports = routes;

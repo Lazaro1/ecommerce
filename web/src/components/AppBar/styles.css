@@ -34,6 +34,14 @@
     display: none;
 }
 
+.appbar-container .appbar-content .appbar-items .user-logged img {
+    border-radius: 50px;
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
 .appbar-container .appbar-content .appbar-items .link-nav {
     text-decoration: none;
     color: #fff;
@@ -49,7 +57,6 @@
     background-color: #fff;
     padding: 50px;
     padding-top: 25px;
-
 }
 
 .appbar-container .category-item {

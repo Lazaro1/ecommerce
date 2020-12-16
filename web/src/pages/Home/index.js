@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 
@@ -14,6 +14,11 @@ import lobo4 from '../../assets/images/lobo4.jpg'
 
 function Home() {
   const history = useHistory();
+
+  useEffect(()=>{
+    console.log(localStorage.getItem('@ecommerce/user/id'), localStorage.getItem('@ecommerce/user/name'))
+  })
+
   const featureds = [
     {
       image: lobo1,
@@ -54,7 +59,7 @@ function Home() {
         <h1> Alguns de nossos destaques </h1>
         
         <div className="cards-featured-container">
-          {featureds.map(featured => (
+          {featureds.map((featured) => (
             <CardFeatured image={featured.image} title={featured.title} description={featured.description} />
           ))}
         </div>
