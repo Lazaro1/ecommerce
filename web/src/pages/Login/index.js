@@ -91,7 +91,10 @@ function Login() {
                 <button type="submit" onClick={e => handleSignin(e)} >Login</button>
               </div>
             </form>
-            <a href="#" onClick={() => setScreenState('signup')}> Ainda não tenho uma conta </a>
+            <div className='login-link'>
+              <a href="#" onClick={() => setScreenState('signup')}> Ainda não tenho uma conta </a>
+            </div>
+            
 
             {users.map((user) => (
               <CardFeatured 
@@ -99,7 +102,6 @@ function Login() {
                 title={user.email} 
                 description={user.password} />
             ))}
-
           </div>
         </div>
       </div>
@@ -127,7 +129,10 @@ function Login() {
               </div>
               <button type="submit" className="btn-login" onClick={e => handleSignup(e)}>Cadastrar</button>
             </form>
-            <a href="#" onClick={() => setScreenState('signin')}> Já possuo conta, fazer login. </a>
+            <div className='login-link'>
+              <a href="#" onClick={() => setScreenState('signin')}> Fazer login. </a>
+            </div>
+            
           </div>
         </div>
       </div>

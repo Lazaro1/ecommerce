@@ -2,6 +2,7 @@
     
     font-family: Roboto, Arial, sans-serif;
   }
+
   
 .login-container .login-section {
     display: flex;
@@ -17,8 +18,8 @@
     margin: 20px 0;
     color: #212529;
 }
-  
-  
+
+ 
 .login-container .login-section form {
     margin: 20px 0;
     background-color: white;
@@ -69,5 +70,10 @@
     background-color: #A9A9A9;
 }
 
+.login-container .login-section .login-link {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
 
 
