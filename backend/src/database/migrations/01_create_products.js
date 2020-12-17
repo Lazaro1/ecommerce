@@ -1,8 +1,9 @@
 exports.up = function (knex) {
     return knex.schema.createTable('products', function (table) {
       table.increments();
+      table.string('image');
+      table.string('tittle');
       table.string('description');
-      table.string('price');
     })
   };
   

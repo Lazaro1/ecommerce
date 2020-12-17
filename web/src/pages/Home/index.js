@@ -6,18 +6,32 @@ import { Slide } from 'react-slideshow-image';
 import CardFeatured from './../../components/CardFeatured'
 import 'react-slideshow-image/dist/styles.css'
 import './styles.css';
+import api from '../../services/api';
 
 import lobo1 from '../../assets/images/lobo1.jpg'
 import lobo2 from '../../assets/images/lobo2.jpg'
 import lobo3 from '../../assets/images/lobo3.jpg'
 import lobo4 from '../../assets/images/lobo4.jpg'
 
-function Home() {
-  const history = useHistory();
 
+function Home() {
+  
   useEffect(()=>{
     console.log(localStorage.getItem('@ecommerce/user/id'), localStorage.getItem('@ecommerce/user/name'))
+    getProducts();
   })
+
+  const getProducts = async () => {
+
+    const serverResponse = await api.get('/products'); 
+
+    const received = serverResponse.data[0]
+    console.log(received)
+
+  }
+
+  const [productState, setProductState] = useState(this.received);
+   
 
   const featureds = [
     {
@@ -31,7 +45,7 @@ function Home() {
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam leo eros, dictum vel mollis sed, accumsan nec libero. Ut non tortor at odio interdum tempor. Donec viverra pharetra lacus vel pretium. Donec at elit non odio accumsan fringilla sed id nunc. Nunc hendrerit risus urna, ac cursus ligula ultricies sit amet. In hac habitasse platea dictumst. Aliquam mattis dignissim magna vitae porta. Morbi aliquet risus vitae lacus convallis, id vestibulum diam tempus. Etiam hendrerit justo est. Nullam sollicitudin mattis maximus. Sed vitae leo et magna vulputate vehicula quis id dolor. Integer vitae risus sed neque ornare aliquet ac sed justo.'
     },
     {
-      image: lobo1,
+      image: lobo4,
       title: 'Title 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam leo eros, dictum vel mollis sed, accumsan nec libero. Ut non tortor at odio interdum tempor. Donec viverra pharetra lacus vel pretium. Donec at elit non odio accumsan fringilla sed id nunc. Nunc hendrerit risus urna, ac cursus ligula ultricies sit amet. In hac habitasse platea dictumst. Aliquam mattis dignissim magna vitae porta. Morbi aliquet risus vitae lacus convallis, id vestibulum diam tempus. Etiam hendrerit justo est. Nullam sollicitudin mattis maximus. Sed vitae leo et magna vulputate vehicula quis id dolor. Integer vitae risus sed neque ornare aliquet ac sed justo.'
     }    
@@ -59,12 +73,15 @@ function Home() {
         <h1> Alguns de nossos destaques </h1>
         
         <div className="cards-featured-container">
-          {featureds.map((featured) => (
-            <CardFeatured image={featured.image} title={featured.title} description={featured.description} />
-          ))}
+            {/* {featureds.map((featured) => (
+              <CardFeatured image={featured.image} title={featured.title} description={featured.description} />
+            ))}       */}
+
+            {featureds.map((featured) => (
+              <CardFeatured image={featured.image} title={featured.title} description={featured.description} />
+            ))}                  
+
         </div>
-
-
       </div>
     </div>
   );
