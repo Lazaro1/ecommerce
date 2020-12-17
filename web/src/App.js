@@ -1,13 +1,12 @@
 import React from 'react'
 import Routes from './Routes'
+import { AnimateSharedLayout } from "framer-motion"
 
 function App() {
-  const teste = 'cachorro'
+  
 
   return (
-    <div>
-      <Routes />
-    </div>
+    <Routes />
   );
 }
 

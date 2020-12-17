@@ -7,6 +7,6 @@ const products = require('./controllers/Products')
 routes.post('/users/login', users.login);
 routes.post('/users', users.createUser);
 routes.get('/users', users.getAll);
-routes.get('/products', products.returnProducts);
+routes.get('/products', products.getAll);
 
 module.exports = routes;
