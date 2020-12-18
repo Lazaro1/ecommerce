@@ -8,12 +8,6 @@ import 'react-slideshow-image/dist/styles.css';
 import './styles.css';
 import api from '../../services/api';
 
-import lobo1 from '../../assets/images/lobo1.jpg';
-import lobo2 from '../../assets/images/lobo2.jpg';
-import lobo3 from '../../assets/images/lobo3.jpg';
-import lobo4 from '../../assets/images/lobo4.jpg';
-
-
 function Home() {
   const [products, setProducts] = useState([]);
   const [isReady, setIsReady] = useState(false);
