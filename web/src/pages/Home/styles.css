@@ -32,7 +32,6 @@ padding: 20px;
 .featured-container .cards-featured-container {
   display: flex;
   align-content: center;
-  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }

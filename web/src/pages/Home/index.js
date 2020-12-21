@@ -12,16 +12,6 @@ function Home() {
   const [products, setProducts] = useState([]);
   const [isReady, setIsReady] = useState(false);
 
-  // VARIÁVEIS DO MOTION //
-  const motionUl = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  }
-  const motionLi = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  }
-
   useEffect(() => {
     console.log(localStorage.getItem('@ecommerce/user/id'), localStorage.getItem('@ecommerce/user/name'));
     getProducts();
@@ -30,15 +20,14 @@ function Home() {
   const getProducts = async () => {
     const serverResponse = await api.get('/products');
     setProducts(serverResponse.data);
-
-
+    
     setIsReady(true);
   }
 
   if (!isReady)
     return <LoaderPage />
   else
-    return (
+     return (
       <div className="home-container">
         <div className="slide-container">
           <Slide>
@@ -60,19 +49,9 @@ function Home() {
           <h1> Alguns de nossos destaques </h1>
 
           <div className="cards-featured-container">
-            <motion.ul
-              initial="hidden"
-              animate="visible"
-              variants={motionUl}>
               {products.map((product) => (
-                <motion.li
-                  animate="visible"
-                  variants={motionLi}>
                   <CardFeatured id={product.id} image={product.image} title={product.tittle} description={product.description} />
-                </motion.li>
               ))}
-            </motion.ul>
-
           </div>
         </div>
       </div >

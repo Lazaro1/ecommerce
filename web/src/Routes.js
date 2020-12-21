@@ -17,8 +17,7 @@ function Routes() {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/Login" component={Login}/>
                 <Route exact path="/CreateUsers" component={CreateUsers}/>
-            </Switch>
-            
+            </Switch>    
         </BrowserRouter>
     );
   }
